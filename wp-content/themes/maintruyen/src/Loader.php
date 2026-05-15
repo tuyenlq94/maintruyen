@@ -8,6 +8,10 @@ class Loader {
 		add_action( 'after_setup_theme', [ $this, 'setup' ] );
 		add_action( 'widgets_init', [ $this, 'widgets_init' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_assets' ] );
+
+		add_action( 'init', [ $this, 'register_routing_system'] );
+		add_filter( 'query_vars', [$this, 'add_query_vars'] );
+		add_action( 'template_redirect', [$this, 'handle_story_routes'] );
 	}
 
 	public function setup() {
@@ -51,5 +55,36 @@ class Loader {
 
 		// Thêm style cho template
 		// Assets::template_css( 'page-templates/home-page.php', 'home' );
+	}
+
+	public function register_routing_system() {
+		add_rewrite_rule(
+			'^truyen/([^/]*)/([^/]*)/?',
+			//'index.php?story_slug=$matches[1]',
+			'index.php?story_slug=$matches[1]&chapter_slug=$matches[2]',
+			'top'
+		);
+	}
+
+	public function add_query_vars($vars) {
+		$vars[] = 'story_slug';
+		
+		$vars[] = 'chapter_slug';
+		
+		return $vars;
+	}
+
+	public function handle_story_routes() {
+		$slug = get_query_var('story_slug');
+
+		if (!$slug) {
+			return;
+		}
+
+		$controller = new \T_Shop\Controllers\StoryController();
+
+		$controller->show($slug);
+
+		exit;
 	}
 }
