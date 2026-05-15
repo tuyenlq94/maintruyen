@@ -21,3 +21,5 @@ new \T_Shop\Api\StoryApi();
 
 new \T_Shop\PostTypes\StoryPostType();
 new \T_Shop\PostTypes\ChapterPostType();
+new \T_Shop\Sync\StorySync();
+new \T_Shop\Sync\ChapterSync();
