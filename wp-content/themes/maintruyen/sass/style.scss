@@ -1,0 +1,18 @@
+/*!
+ * Theme Name:  Starter Theme
+ * Theme URI:    https://titanweb.vn
+ * Author:       Tuyenlq
+ * Author URI:   https://titanweb.vn
+ * Description:  Một sản phẩm của TitanWeb.
+ * Version:      1.0.0
+ */
+
+@import "base/bamboo";
+
+@import "variables";
+@import "base/element";
+@import "base/accessibility";
+
+@import "components/layout";
+@import "components/header";
+@import "components/footer";

@@ -1,0 +1,47 @@
+.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img {
+		@include center-block;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+	font-size: var(--text-xs);
+	margin-top: .5rem;
+}
+
+.gallery {
+	margin-bottom: 1.5em;
+	display: grid;
+	grid-gap: 16px;
+	text-align: center;
+
+	img {
+		display: block;
+	}
+}
+
+// Loops to enumerate the classes for gallery columns.
+@for $i from 2 through 9 {
+	.gallery-columns-#{$i} {
+		grid-template-columns: repeat($i, 1fr);
+	}
+}
+
+.gallery-item {
+	margin: 0;
+}
+
+.gallery-caption {
+	display: block;
+}
