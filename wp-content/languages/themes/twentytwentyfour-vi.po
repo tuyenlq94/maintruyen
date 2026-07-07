@@ -211,7 +211,7 @@ msgctxt "Pattern title"
 msgid "List of posts without images, 1 column"
 msgstr "Danh sách bài viết không có hình ảnh, 1 cột"
 
-#: functions.php:200
+#: functions.php:188
 msgid "A collection of full page layouts."
 msgstr "Bộ sưu tập bố cục trang đầy đủ."
 
@@ -219,7 +219,7 @@ msgstr "Bộ sưu tập bố cục trang đầy đủ."
 msgid "I’m <em>Leia Acosta</em>, a passionate photographer who finds inspiration in capturing the fleeting beauty of life."
 msgstr "Tôi là <em>Leia Acosta</em>, một nhiếp ảnh gia đam mê, tìm thấy nguồn cảm hứng trong việc nắm bắt vẻ đẹp thoáng qua của cuộc sống."
 
-#: functions.php:199
+#: functions.php:187
 msgctxt "Block pattern category"
 msgid "Pages"
 msgstr "Các trang"
@@ -1440,23 +1440,23 @@ msgctxt "Heading of the hero section"
 msgid "A commitment to innovation and sustainability"
 msgstr "Cam kết đổi mới và bền vững"
 
-#: functions.php:111
+#: functions.php:107
 msgid "With asterisk"
 msgstr "Có dấu sao"
 
-#: functions.php:93
+#: functions.php:89
 msgid "With arrow"
 msgstr "Có mũi tên"
 
-#: functions.php:74
+#: functions.php:70
 msgid "Checkmark"
 msgstr "Dấu tích"
 
-#: functions.php:51
+#: functions.php:47
 msgid "Pill"
 msgstr "Viên thuốc"
 
-#: functions.php:28
+#: functions.php:24
 msgid "Arrow icon"
 msgstr "Biểu tượng mũi tên"
 
